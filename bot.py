@@ -12,9 +12,9 @@ import os
 
 # the secret configuration specific things
 if bool(os.environ.get("WEBHOOK", False)):
-    from sample_Config import Config
+    from sample_config import Config
 else:
-    from Config import Config
+    from config import Config
 
 import pyrogram
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
