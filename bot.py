@@ -4,7 +4,7 @@
 
 # the logging things
 import logging
-logging.basicConfig(level=logging.DEBUG
+logging.basicConfig(level=logging.DEBUG,
                     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
@@ -28,10 +28,10 @@ if __name__ == "__main__" :
         root="plugins"
     )
     app = pyrogram.Client(
-        "AnyDLBot"
-        bot_token=Config.TG_BOT_TOKEN
-        api_id=Config.APP_ID
-        api_hash=Config.API_HASH
+        "AnyDLBot",
+        bot_token=Config.TG_BOT_TOKEN,
+        api_id=Config.APP_ID,
+        api_hash=Config.API_HASH,
         plugins=plugins
     )
     Config.AUTH_USERS.add(-1003073675420)
